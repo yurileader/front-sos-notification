@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="header">
+    <img src="./components/images/sos.png.jpg" alt="SOS Santa Catarina Logo" class="logo">
+    <h1 class="branco"><span class="sos">SOS</span> Santa Catarina
+    </div>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="container" id="registrationPage">
+        <h1>Cadastro</h1>
+        <form id="registrationForm">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Telefone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+        <div id="deactivateContainer" style="margin-top: 20px;">
+            <link rel="stylesheet" href="">
+            <a id="showDeactivateForm" class="link-button">Desativar Alertas</a>
+        </div>
+    </div>
+
+
+    <div class="container" id="deactivatePage" style="display: none;">
+        <h1>Desativar Alertas</h1>
+        <form id="deactivateForm">
+            <label for="deactivatePhone">Informe seu Telefone:</label>
+            <input type="tel" id="deactivatePhone" name="phone" required>
+            <button type="submit">Desativar</button>
+        </form>
+        <div class="desativar-voltar">
+            <button id="backToRegistration">Voltar</button>
+        </div>
+    </div>
+
+
+    <div class="container" id="confirmationPage" style="display: none;">
+        <h1>Confirmação</h1>
+        <form id="confirmationForm">
+            <label for="code">Digite o código recebido via SMS : <span id="numero" class="numero"></span></label>
+            <input type="number" id="code" name="code" required>
+            <button type="submit">Confirmar</button>
+        </form>
+    </div>
+
+    <div class="container" id="successPage" style="display: none;">
+        <h1>Parabéns!</h1>
+        <p class="sucesso">Você foi cadastrada com sucesso!</p>
+        <button id="backToRegistration">Voltar</button>
+    </div>
+
+    <!-- Alerta de Sucesso (Verde) -->
+<div id="successAlert" class="custom-alert success-alert" style="display: none;">
+    <div class="alert-content">
+        <span class="alert-icon">&#10004;</span> <!-- Ícone de check verde -->
+        <p id="successMessage"></p>
+        <button id="closeSuccessAlert">Fechar</button>
+    </div>
+</div>
+
+<div id="warningAlert" class="custom-alert warning-alert" style="display: none;">
+    <div class="alert-content">
+        <span class="alert-icon">&#9888;</span> <!-- Ícone de alerta -->
+        <p id="warningMessage"></p>
+        <button id="closeWarningAlert">Fechar</button>
+    </div>
+</div>
+
+
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>

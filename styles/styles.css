@@ -1,0 +1,215 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    color: #333;
+    background-size: cover;
+    background-image: url('../components/images/chuva.jpg');
+}
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: -1; 
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3f3e3e; 
+    opacity: 0.9;
+    padding: 10px;
+}
+
+.logo {
+    height: 70px; 
+    margin-right: 10px; 
+    border-radius: 10px;
+}
+
+.header h1 {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.container {
+    max-width: 30rem;
+    margin: 0 auto; 
+    padding: 4rem;
+    margin-top: 10rem;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+label {
+    display: block;
+    margin-bottom: 5px; 
+    font-weight: bold;
+    text-align: left; 
+    width: 100%; 
+}
+
+input {
+    width: 90%; 
+    padding: 6px; 
+    margin-bottom: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px; 
+}
+
+button {
+    width: 100%; 
+    padding: 8px; 
+    background-color: #0044cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px; 
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003399;
+}
+
+.custom-alert {
+    position: fixed;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    width: 100rem; 
+    max-width: 800px; 
+    padding: 20px; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+    border-radius: 12px; 
+}
+
+.alert-content {
+    text-align: center;
+}
+
+.success-alert {
+    background-color: rgba(0, 128, 0, 0.95); 
+    color: white;
+}
+
+.success-alert .alert-icon {
+    font-size: 32px;
+    margin-bottom: 10px; 
+}
+
+.success-alert p {
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 15px;
+    color: white; 
+}
+
+.success-alert button {
+    padding: 10px 20px;
+    background-color: white;
+    color: #28a745;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px; 
+    cursor: pointer;
+}
+
+.success-alert button:hover {
+    background-color: #218838; 
+    color: white;
+}
+
+.warning-alert {
+    background-color: rgba(255, 0, 0, 0.95); 
+    color: white;
+}
+
+.warning-alert .alert-icon {
+    font-size: 32px; 
+    margin-bottom: 10px;
+}
+
+.warning-alert p {
+    font-size: 20px; 
+    margin: 0;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.warning-alert button {
+    padding: 10px 20px; 
+    background-color: white;
+    color: #dc3545; 
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.warning-alert button:hover {
+    background-color: #c82333; 
+    color: white;
+}
+
+.custom-alert[style*="display: none;"] {
+    opacity: 0;
+}
+
+.link-button {
+    background: none;
+    border: none;
+    color: #007BFF;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.link-button:hover {
+    color: #0056b3;
+}
+.desativar-voltar {
+    margin-top: 5px;
+}
+.sucesso {
+    margin: 0 auto;
+}
+
+.sos {
+    color: red;
+    -webkit-text-stroke: 1px rgb(255, 255, 255); /* Para navegadores baseados em WebKit */ 
+}
+
+.numero {
+    position: relative;
+}
+
+.numero::after {
+    content: "****";
+    position: absolute;
+    right: 0;
+    top: 0;
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+    background-color: white;
+    padding-left: 0.1em;
+}
