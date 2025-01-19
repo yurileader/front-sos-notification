@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:8080/alertas'; 
+const baseUrl = 'https://sos-yurileader-app-9b7ed08fae12.herokuapp.com/alertas'; 
 
 function showSuccessAlert(message) {
     const successMessage = document.getElementById('successMessage');
